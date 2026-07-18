@@ -56,7 +56,7 @@ async def categorize_note(request: CategorizeRequest):
     try:
         # Prompt Claude to categorize
         message = claude_client.messages.create(
-            model="claude-3-haiku-20240307",
+            model="claude-3-5-sonnet-20241022",
             max_tokens=500,
             temperature=0.3,
             system="""You are a note categorization assistant for Notia, a personal idea capture app.
