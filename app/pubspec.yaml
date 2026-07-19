@@ -25,8 +25,7 @@ dependencies:
   http: ^1.2.2
   
   # Speech Recognition
-  speech_to_text: ^7.0.0
-  permission_handler: ^11.3.1
+ 
   
   # Home Screen Widget
   home_widget: ^0.6.0
