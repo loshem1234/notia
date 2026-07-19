@@ -1,8 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="android.permission.MICROPHONE"/>
     
     <application
         android:label="Notia"
@@ -12,6 +11,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
+            android:taskAffinity=""
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
@@ -25,19 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        
-        <!-- Home widget receiver -->
-        <receiver 
-            android:name="es.antonborri.home_widget.HomeWidgetProvider"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data 
-                android:name="android.appwidget.provider"
-                android:resource="@xml/home_widget_info" />
-        </receiver>
-        
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
