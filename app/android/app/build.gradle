@@ -5,9 +5,9 @@ plugins {
 }
 
 android {
-    namespace = "com.notia.app"
+    namespace = "com.example.notia"
     compileSdk = 34
-    ndkVersion = "26.1.10909125"
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -19,11 +19,11 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.notia.app"
-        minSdk = 24
+        applicationId = "com.example.notia"
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "1.0"
     }
 
     buildTypes {
