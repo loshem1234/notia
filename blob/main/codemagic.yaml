@@ -1,0 +1,29 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      groups:
+        - android_signing
+    scripts:
+      - name: Navigate to app directory
+        script: |
+          ls -la
+          cd app
+          pwd
+          ls -la
+      - name: Get Flutter packages
+        script: |
+          cd app
+          flutter packages pub get
+      - name: Build APK
+        script: |
+          cd app
+          flutter build apk --release --verbose
+    artifacts:
+      - app/build/app/outputs/flutter-apk/*.apk
+    publishing:
+      email:
+        recipients:
+          - loshem1234@gmail.com
